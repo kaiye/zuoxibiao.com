@@ -23,8 +23,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-brand">
-          <div className="logo">Z</div>
-          <span className="brand-text">健康作息表</span>
+          <img src="/favicon.png" alt="Logo" className="logo-img" />
+          <span className="brand-text">作息表 zuoxibiao.com</span>
         </div>
         <div className={`navbar-menu ${isMobileMenuOpen ? 'show' : ''}`}>
           <Link 
@@ -39,7 +39,7 @@ const Navbar = () => {
             className={`nav-link ${isActive('/schedules') ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            选择作息表
+            推荐作息表
           </Link>
           <a 
             href="#about" 

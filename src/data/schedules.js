@@ -4,11 +4,13 @@ export const schedulesData = {
     {
       "id": "original-healthy",
       "title": "世界上最健康的作息时间表",
-      "description": "基于威斯敏斯特大学等多项科学研究制定的健康作息时间表",
+      "description": "基于威斯敏斯特大学等多项科学研究制定的作息表",
+      "age_group": "成年人",
+      "scenario": "其他",
       "category": "健康养生",
       "target_audience": "成年人",
-      "source": "威斯敏斯特大学、拉夫堡大学睡眠研究中心等",
-      "source_url": "https://zuoxibiao.com",
+      "source": "央视网",
+      "source_url": "https://jiankang.cctv.com/2017/04/24/ARTIzlssypAewlg8XvAx11tU170424.shtml",
       "schedule": [
         {
           "time": "7:30",
@@ -101,6 +103,8 @@ export const schedulesData = {
       "id": "bill-gates",
       "title": "比尔·盖茨作息时间表",
       "description": "微软创始人比尔·盖茨的高效工作时间安排",
+      "age_group": "成年人",
+      "scenario": "创业者",
       "category": "企业家",
       "target_audience": "企业家、创业者",
       "source": "多家媒体报道整理",
@@ -135,6 +139,8 @@ export const schedulesData = {
       "id": "jack-ma",
       "title": "马云作息时间表",
       "description": "阿里巴巴创始人马云的工作与生活平衡",
+      "age_group": "成年人",
+      "scenario": "创业者",
       "category": "企业家",
       "target_audience": "企业家、创业者",
       "source": "CNBC、多家媒体报道",
@@ -182,6 +188,8 @@ export const schedulesData = {
       "id": "who-adult",
       "title": "WHO成人健康作息建议",
       "description": "世界卫生组织推荐的成人健康生活时间安排",
+      "age_group": "成年人",
+      "scenario": "其他",
       "category": "健康机构",
       "target_audience": "18-64岁成年人",
       "source": "世界卫生组织官方指南",
@@ -209,6 +217,8 @@ export const schedulesData = {
       "id": "harvard-student",
       "title": "哈佛大学学生作息时间表",
       "description": "哈佛大学学生的典型学习与生活安排",
+      "age_group": "青少年",
+      "scenario": "学生",
       "category": "学生",
       "target_audience": "大学生",
       "source": "哈佛大学官方学生博客",
@@ -263,6 +273,8 @@ export const schedulesData = {
       "id": "tsinghua-student",
       "title": "清华大学学霸作息时间表",
       "description": "清华大学优秀学生的高强度学习时间安排",
+      "age_group": "青少年",
+      "scenario": "学生",
       "category": "学生",
       "target_audience": "大学生、高中生",
       "source": "人民日报、多家媒体报道",
@@ -312,6 +324,8 @@ export const schedulesData = {
       "id": "successful-entrepreneurs",
       "title": "成功企业家早晨作息",
       "description": "世界500强CEO的早晨习惯和时间管理",
+      "age_group": "成年人",
+      "scenario": "上班族",
       "category": "企业家",
       "target_audience": "企业家、管理者",
       "source": "多项CEO作息研究报告",
@@ -346,8 +360,10 @@ export const schedulesData = {
     },
     {
       "id": "who-children",
-      "title": "儿童健康作息时间表（WHO推荐）",
+      "title": "儿童作息表（WHO推荐）",
       "description": "世界卫生组织推荐的儿童健康生活作息安排",
+      "age_group": "儿童",
+      "scenario": "其他",
       "category": "健康机构",
       "target_audience": "3-12岁儿童",
       "source": "世界卫生组织儿童指南",
@@ -396,8 +412,10 @@ export const schedulesData = {
     },
     {
       "id": "teenagers",
-      "title": "青少年健康作息时间表",
+      "title": "青少年作息表",
       "description": "青少年生理特征和学习需求的最佳时间安排",
+      "age_group": "青少年",
+      "scenario": "学生",
       "category": "学生",
       "target_audience": "13-18岁青少年",
       "source": "美国睡眠医学会建议",
@@ -439,8 +457,10 @@ export const schedulesData = {
     },
     {
       "id": "elderly",
-      "title": "老年人健康作息时间表",
+      "title": "老年人作息表",
       "description": "适合老年人身体状况和生活节奏的健康作息安排",
+      "age_group": "老年人",
+      "scenario": "其他",
       "category": "健康养生",
       "target_audience": "60岁以上老年人",
       "source": "老年医学研究",
@@ -499,6 +519,240 @@ export const schedulesData = {
         },
         {
           "note": "避免过于刺激的活动，保持平和心态"
+        }
+      ]
+    },
+    {
+      "id": "elon-musk",
+      "title": "埃隆·马斯克作息时间表",
+      "description": "特斯拉和SpaceX创始人埃隆·马斯克的极效工作时间安排",
+      "age_group": "成年人",
+      "scenario": "创业者",
+      "category": "企业家",
+      "target_audience": "企业家、创业者",
+      "source": "CEO Today、Men's Health、CNBC等多家媒体报道",
+      "source_url": "https://www.ceotodaymagazine.com/2025/02/inside-elon-musks-intense-daily-routine/",
+      "schedule": [
+        {
+          "time": "7:00",
+          "activity": "起床",
+          "description": "每天7:00准时起床，保持固定作息时间"
+        },
+        {
+          "time": "7:00-7:30",
+          "activity": "查看重要邮件",
+          "description": "起床后30分钟处理关键邮件和信息，虽然承认这是个'糟糕'的习惯"
+        },
+        {
+          "time": "7:30",
+          "activity": "洗澡",
+          "description": "淋浴时间是产生创意想法和为一天做准备的重要时刻"
+        },
+        {
+          "time": "7:30-8:00",
+          "activity": "送孩子上学",
+          "description": "尽可能亲自送孩子上学，享受家庭时光"
+        },
+        {
+          "time": "8:00-20:00",
+          "activity": "极限工作模式",
+          "description": "80-120小时/周工作制，90%时间专注于工程设计，使用5分钟时间块精确规划"
+        },
+        {
+          "time": "12:00",
+          "activity": "午餐（经常跳过）",
+          "description": "经常跳过午餐或在会议中匆忙解决，优先工作效率"
+        },
+        {
+          "time": "20:00-22:00",
+          "activity": "商务晚餐",
+          "description": "根据需要安排商务晚餐和会议"
+        },
+        {
+          "time": "22:00-23:00",
+          "activity": "家庭时间",
+          "description": "与孩子共度时光，保持家庭联系"
+        },
+        {
+          "time": "23:00-1:00",
+          "activity": "阅读和娱乐",
+          "description": "阅读《指环王》、《银河系漫游指南》等，看动漫或玩游戏放松"
+        },
+        {
+          "time": "1:00",
+          "activity": "睡觉",
+          "description": "通常1:00左右睡觉，睡前2-3小时避免进食和饮酒"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "note": "一周工作安排：周一周五在SpaceX（洛杉矶/德州），周二到周四在特斯拉（奥斯汀）"
+        },
+        {
+          "note": "运动：目标每天20分钟，实际每周几次，包括举重、跑步机、武术（空手道、跆拳道、巴西柔术）"
+        },
+        {
+          "note": "时间管理：以5分钟为单位进行极其精确的时间规划"
+        },
+        {
+          "note": "睡眠优化：认为6小时是最佳睡眠时长，保证大脑最佳表现"
+        }
+      ]
+    },
+    {
+      "id": "michelle-obama",
+      "title": "米歇尔·奥巴马作息时间表",
+      "description": "前第一夫人米歇尔·奥巴马的健康生活和工作平衡",
+      "age_group": "成年人",
+      "scenario": "自由职业者",
+      "category": "名人",
+      "target_audience": "职业女性、注重健康人士",
+      "source": "多家权威媒体采访及《成为》回忆录",
+      "source_url": "https://www.today.com/series/one-small-thing/michelle-obama-s-fitness-routine-t112908",
+      "schedule": [
+        {
+          "time": "4:30",
+          "activity": "起床",
+          "description": "坚持4:30起床，确保有充足时间进行晨练"
+        },
+        {
+          "time": "4:30-5:30",
+          "activity": "晨练",
+          "description": "1小时锻炼，从不缺席。现在主要是瑜伽和游泳等低冲击运动"
+        },
+        {
+          "time": "5:30-6:30",
+          "activity": "个人准备时间",
+          "description": "洗漱、准备一天的工作和生活安排"
+        },
+        {
+          "time": "6:30-18:30",
+          "activity": "工作时间",
+          "description": "Higher Ground Productions、奥巴马基金会等工作，时间安排围绕家庭优先"
+        },
+        {
+          "time": "18:30",
+          "activity": "家庭晚餐",
+          "description": "尽可能每晚与家人共进晚餐，这是不可妥协的家庭时光"
+        },
+        {
+          "time": "19:00",
+          "activity": "家庭活动时间",
+          "description": "与家人分享'玫瑰与刺'（当天的亮点和挑战），维系家庭纽带"
+        },
+        {
+          "time": "20:00-21:00",
+          "activity": "准备睡觉",
+          "description": "称睡觉时间为'最美好的时光'，对此充满期待"
+        },
+        {
+          "time": "21:00",
+          "activity": "睡觉",
+          "description": "'头一碰到枕头就立刻睡着'，不需要任何助眠措施"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "note": "健身理念：从高冲击运动转向瑜伽和游泳，适应年龄变化调整运动方式"
+        },
+        {
+          "note": "饮食习惯：一天五餐，自己准备食物，曾经大半辈子都吃同样的花生酱果酱三明治作早餐"
+        },
+        {
+          "note": "生活哲学：每天给自己'快乐的许可'，认为身体、心理和情感健康密不可分"
+        },
+        {
+          "note": "时间管理：工作安排围绕家庭优先原则，不让工作影响重要的家庭时光"
+        },
+        {
+          "note": "睡眠质量：非常重视睡眠，睡眠质量极佳，无需任何助眠产品"
+        }
+      ]
+    },
+    {
+      "id": "lebron-james",
+      "title": "勒布朗·詹姆斯作息时间表",
+      "description": "NBA超级巨星勒布朗·詹姆斯的职业运动员训练和恢复计划",
+      "age_group": "成年人",
+      "scenario": "运动员",
+      "category": "运动员",
+      "target_audience": "运动员、健身爱好者",
+      "source": "Men's Health、Sports Illustrated等多家体育媒体",
+      "source_url": "https://www.menshealth.com/fitness/a19536973/lebron-james-workout/",
+      "schedule": [
+        {
+          "time": "6:00",
+          "activity": "起床",
+          "description": "自然醒来，不使用闹钟，保证充足睡眠后的自然苏醒"
+        },
+        {
+          "time": "6:00-6:30",
+          "activity": "晨间补水和营养",
+          "description": "20盎司电解质水补充水分，然后是含蓝莓、香蕉、坚果、种子的营养奶昔"
+        },
+        {
+          "time": "8:00-10:00",
+          "activity": "力量训练",
+          "description": "每周5次锻炼计划：20分钟有氧+泡沫轴放松，力量训练（硬拉、划船、卷曲等4组×12次）"
+        },
+        {
+          "time": "10:00-10:30",
+          "activity": "恢复训练",
+          "description": "50%的训练时间专注于柔韧性工作，使用阻力带而非传统重量训练"
+        },
+        {
+          "time": "10:30-11:00",
+          "activity": "冷热水疗法",
+          "description": "对比疗法：1.5分钟冷水浴，3分钟热水浴，重复4-5轮促进恢复"
+        },
+        {
+          "time": "12:00-13:00",
+          "activity": "午餐",
+          "description": "营养均衡的正餐，蛋白质、复杂碳水化合物和健康脂肪"
+        },
+        {
+          "time": "14:00-16:30",
+          "activity": "午休",
+          "description": "2.5小时高质量午睡，这是恢复计划的重要组成部分"
+        },
+        {
+          "time": "17:00-18:30",
+          "activity": "技术训练",
+          "description": "篮球技能训练、战术演练和体能维持训练"
+        },
+        {
+          "time": "18:30-19:30",
+          "activity": "放松训练",
+          "description": "15-30分钟瑜伽，重点进行泡沫轴放松（股四头肌、小腿、腿筋、下背部）"
+        },
+        {
+          "time": "19:30-20:30",
+          "activity": "晚餐",
+          "description": "营养丰富的晚餐，为第二天的训练做准备"
+        },
+        {
+          "time": "20:30-21:00",
+          "activity": "认知练习",
+          "description": "大脑去刺激化练习，为高质量睡眠做准备"
+        },
+        {
+          "time": "21:00",
+          "activity": "睡觉",
+          "description": "严格执行21:00睡觉时间，确保8-10小时的优质睡眠"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "note": "睡眠优先：认为优质REM睡眠对恢复'没有什么更重要的'，每晚8-10小时+午睡2.5小时"
+        },
+        {
+          "note": "三管齐下恢复法：营养、柔韧性、冷冻疗法相结合的全面恢复体系"
+        },
+        {
+          "note": "功能性训练：专注于运动相关动作，50%训练时间用于柔韧性而非力量"
+        },
+        {
+          "note": "一致性原则：无论旅行或比赛安排如何，都保持相同的作息和恢复routine"
         }
       ]
     }

@@ -6,18 +6,18 @@ import ScheduleCard from '../components/ScheduleCard'
 const SchedulesPage = () => {
   const { schedules, openModal } = useSchedule()
   const navigate = useNavigate()
-  const [categoryFilter, setCategoryFilter] = useState('all')
-  const [audienceFilter, setAudienceFilter] = useState('all')
+  const [ageGroupFilter, setAgeGroupFilter] = useState('all')
+  const [scenarioFilter, setScenarioFilter] = useState('all')
 
   // 获取所有分类
-  const categories = ['all', ...new Set(schedules.map(s => s.category))]
-  const audiences = ['all', ...new Set(schedules.flatMap(s => s.target_audience.split('、')))]
+  const ageGroups = ['all', '儿童', '青少年', '成年人', '老年人']
+  const scenarios = ['all', '学生', '上班族', '自由职业者', '创业者', '运动员', '其他']
 
   // 应用筛选
   const filteredSchedules = schedules.filter(schedule => {
-    const categoryMatch = categoryFilter === 'all' || schedule.category === categoryFilter
-    const audienceMatch = audienceFilter === 'all' || schedule.target_audience.includes(audienceFilter)
-    return categoryMatch && audienceMatch
+    const ageGroupMatch = ageGroupFilter === 'all' || schedule.age_group === ageGroupFilter
+    const scenarioMatch = scenarioFilter === 'all' || schedule.scenario === scenarioFilter
+    return ageGroupMatch && scenarioMatch
   })
 
   const handleCardClick = (schedule) => {
@@ -40,29 +40,29 @@ const SchedulesPage = () => {
           {/* 筛选器 */}
           <div className="filter-container">
             <div className="filter-group">
-              <label>分类筛选：</label>
+              <label>年龄段：</label>
               <div className="filter-buttons">
-                {categories.map(category => (
+                {ageGroups.map(ageGroup => (
                   <button
-                    key={category}
-                    className={`filter-btn ${categoryFilter === category ? 'active' : ''}`}
-                    onClick={() => setCategoryFilter(category)}
+                    key={ageGroup}
+                    className={`filter-btn ${ageGroupFilter === ageGroup ? 'active' : ''}`}
+                    onClick={() => setAgeGroupFilter(ageGroup)}
                   >
-                    {category === 'all' ? '全部' : category}
+                    {ageGroup === 'all' ? '全部' : ageGroup}
                   </button>
                 ))}
               </div>
             </div>
             <div className="filter-group">
-              <label>目标人群：</label>
+              <label>场景：</label>
               <div className="filter-buttons">
-                {audiences.map(audience => (
+                {scenarios.map(scenario => (
                   <button
-                    key={audience}
-                    className={`filter-btn ${audienceFilter === audience ? 'active' : ''}`}
-                    onClick={() => setAudienceFilter(audience)}
+                    key={scenario}
+                    className={`filter-btn ${scenarioFilter === scenario ? 'active' : ''}`}
+                    onClick={() => setScenarioFilter(scenario)}
                   >
-                    {audience === 'all' ? '全部' : audience}
+                    {scenario === 'all' ? '全部' : scenario}
                   </button>
                 ))}
               </div>

@@ -126,17 +126,11 @@ body {
     text-decoration: none;
 }
 
-.logo {
+.logo-img {
     height: 40px;
     width: 40px;
-    background: var(--primary-color);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1.2rem;
+    object-fit: contain;
+    border-radius: var(--radius-md);
 }
 
 .brand-text {
@@ -164,17 +158,6 @@ body {
     background: var(--gray-100);
 }
 
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 2px;
-    background: var(--primary-color);
-    border-radius: 1px;
-}
 
 .mobile-menu-toggle {
     display: none;
@@ -262,6 +245,7 @@ body {
     background: var(--bg-primary);
 }
 
+
 .current-time-header {
     display: flex;
     justify-content: space-between;
@@ -271,51 +255,8 @@ body {
     gap: var(--space-4);
 }
 
-.current-schedule-indicator {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    background: var(--gray-100);
-    padding: var(--space-3) var(--space-5);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-200);
-}
 
-.indicator-label {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    font-weight: 500;
-}
 
-.indicator-name {
-    font-weight: 600;
-    color: var(--primary-color);
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.change-schedule-btn {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--radius-md);
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    text-decoration: none;
-}
-
-.change-schedule-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-1px);
-}
 
 .current-time-display {
     display: flex;
@@ -901,10 +842,6 @@ body {
         align-items: flex-start;
     }
     
-    .current-schedule-indicator {
-        width: 100%;
-        justify-content: space-between;
-    }
     
     .current-time-display {
         flex-direction: column;

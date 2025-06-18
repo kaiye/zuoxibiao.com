@@ -36,7 +36,7 @@ const HomePage = () => {
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">科学作息 健康生活</h1>
-            <p className="hero-subtitle">基于权威机构研究和成功人士经验的健康作息时间表</p>
+            <p className="hero-subtitle">基于权威机构研究和成功人士经验的作息表</p>
             <div className="hero-quote">
               <span className="quote-mark">"</span>
               <span className="quote-content">{randomQuote || '健康作息，从今天开始！'}</span>
@@ -50,15 +50,9 @@ const HomePage = () => {
       <section className="current-schedule" id="current-schedule">
         <div className="container">
           <div className="current-time-header">
-            <h2 className="section-title">当前作息表</h2>
-            <div className="current-schedule-indicator">
-              <span className="indicator-name">
-                {currentSchedule ? currentSchedule.title : '正在加载...'}
-              </span>
-              <Link to="/schedules" className="change-schedule-btn">
-                切换
-              </Link>
-            </div>
+            <h2 className="section-title">
+              {currentSchedule ? currentSchedule.title : '当前作息表'}
+            </h2>
           </div>
           
           {/* 当前时间显示 */}

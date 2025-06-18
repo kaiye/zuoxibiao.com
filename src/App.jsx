@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
@@ -9,6 +9,7 @@ import { schedulesData, quotesData } from './data/schedules'
 import { ScheduleProvider } from './context/ScheduleContext'
 
 function App() {
+  const navigate = useNavigate()
   const [currentSchedule, setCurrentSchedule] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalSchedule, setModalSchedule] = useState(null)
@@ -58,6 +59,7 @@ function App() {
     if (modalSchedule) {
       handleSetSchedule(modalSchedule)
       handleCloseModal()
+      navigate('/')
     }
   }
 
