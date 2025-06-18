@@ -222,7 +222,8 @@ body {
 }
 
 .hero-quote {
-    max-width: 600px;
+    width: fit-content;
+    max-width: 90%;
     margin: 0 auto;
     font-size: 1.1rem;
     font-style: italic;
@@ -231,6 +232,7 @@ body {
     border-radius: var(--radius-xl);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
 }
 
 .quote-mark {
@@ -309,7 +311,7 @@ body {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-primary);
     margin-bottom: var(--space-4);
     font-weight: 700;
@@ -837,6 +839,10 @@ body {
         font-size: 1.125rem;
     }
     
+    .current-schedule {
+        padding: var(--space-8) 0;
+    }
+    
     .current-time-header {
         flex-direction: column;
         align-items: flex-start;
@@ -910,7 +916,7 @@ body {
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     
     .current-time {

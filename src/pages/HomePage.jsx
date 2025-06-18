@@ -68,7 +68,7 @@ const HomePage = () => {
               <p>
                 {currentActivity 
                   ? currentActivity.description 
-                  : (currentSchedule ? '请根据您选择的作息表安排适当的活动。' : '点击上方切换按钮选择适合您的作息时间表。')
+                  : (currentSchedule ? '' : '点击顶部导航"推荐作息表"选择适合您的作息时间表。')
                 }
               </p>
             </div>
