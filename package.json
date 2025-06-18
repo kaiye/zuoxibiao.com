@@ -1,0 +1,32 @@
+{
+  "name": "zuoxibiao-react-app",
+  "version": "1.0.0",
+  "description": "健康作息时间表 - React 单页应用",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 8080"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "terser": "^5.43.0",
+    "vite": "^4.1.0"
+  },
+  "keywords": [
+    "健康作息",
+    "时间表",
+    "react",
+    "spa"
+  ],
+  "author": "ZuoXiBiao.com",
+  "license": "MIT"
+}
