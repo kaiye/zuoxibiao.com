@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>关于我们</h3>
-            <p>致力于提供科学、权威的作息表，帮助您建立健康的生活节奏。我们整理了来自世界知名机构和成功人士的作息建议，为不同年龄段和生活场景提供参考。</p>
+            <h3>关于本站</h3>
+            <p>本站精选了来自北京协和医院、清华北大学霸、考研专家等权威机构和成功人士的科学作息建议。涵盖减肥养生、学习备考、职场生活等多个场景，为不同年龄段用户提供个性化的时间管理方案，助您养成健康规律的生活习惯。</p>
           </div>
           <div className="footer-section">
             <h3>联系我们</h3>

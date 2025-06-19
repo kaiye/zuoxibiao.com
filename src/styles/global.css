@@ -261,6 +261,8 @@ body {
     margin-bottom: var(--space-10);
     flex-wrap: wrap;
     gap: var(--space-4);
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
 }
 
 
@@ -335,7 +337,6 @@ body {
 /* 筛选器 */
 .filter-container {
     margin-bottom: var(--space-12);
-    background: var(--bg-primary);
     padding: var(--space-8);
 }
 
@@ -852,24 +853,52 @@ body {
         font-size: 1.125rem;
     }
     
+    /* 首页mobile端样式调整 */
     .current-schedule {
         padding: var(--space-8) 0;
     }
     
+    /* 修改container的左右padding为1.5rem */
+    .current-schedule .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    /* 重置三个模块的左右padding/margin为0 */
     .current-time-header {
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
     }
-    
     
     .current-time-display {
         flex-direction: column;
         gap: var(--space-8);
         text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .current-schedule .schedule-detail {
+        padding: var(--space-8) 0;
     }
     
     .current-time {
         font-size: 3rem;
+    }
+    
+    /* 推荐页作息表筛选模块mobile端调整 */
+    .schedules-section .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .filter-container {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .schedule-cards {
@@ -897,6 +926,10 @@ body {
         padding-right: var(--space-6);
     }
     
+    .modal-footer {
+        justify-content: center;
+    }
+    
     .timeline-item {
         flex-direction: column;
         gap: var(--space-3);
@@ -905,6 +938,27 @@ body {
     .timeline-time {
         min-width: auto;
         font-size: 1rem;
+    }
+    
+    /* 我的页面mobile端样式调整 */
+    .my-schedule-section .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        background: var(--bg-primary);
+    }
+    
+    .my-schedule-section .current-schedule-card {
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--space-8) 0;
+        background: none;
+    }
+    
+    .my-schedule-section .custom-schedules-section {
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--space-8) 0;
+        background: none;
     }
     
     .footer-content {
@@ -1385,7 +1439,6 @@ select:focus {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-xl);
     border: 1px solid var(--gray-200);
-    min-width: 300px;
     max-width: 500px;
     z-index: 9999;
     transform: translateX(400px);
@@ -1476,7 +1529,6 @@ select:focus {
         top: 10px;
         right: 10px;
         left: 10px;
-        min-width: auto;
         max-width: none;
         transform: translateY(-100px);
     }

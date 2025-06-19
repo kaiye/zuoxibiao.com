@@ -5,6 +5,7 @@ const NotificationSettings = ({ currentSchedule }) => {
   const { hasPermission, enableNotifications, isSupported } = useNotifications(currentSchedule)
   const [isLoading, setIsLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+  const [showGuideModal, setShowGuideModal] = useState(false)
 
   if (!isSupported) {
     return (
@@ -17,7 +18,12 @@ const NotificationSettings = ({ currentSchedule }) => {
     )
   }
 
-  const handleEnableNotifications = async () => {
+  const handleEnableNotifications = () => {
+    setShowGuideModal(true)
+  }
+
+  const handleConfirmEnable = async () => {
+    setShowGuideModal(false)
     setIsLoading(true)
     setErrorMessage('')
     
@@ -68,6 +74,56 @@ const NotificationSettings = ({ currentSchedule }) => {
         <div className="notification-error">
           <span className="notification-icon">❌</span>
           <span>{errorMessage}</span>
+        </div>
+      )}
+      
+      {/* 通知授权指导弹窗 */}
+      {showGuideModal && (
+        <div className="modal show">
+          <div className="modal-overlay" onClick={() => setShowGuideModal(false)}></div>
+          <div className="modal-content" style={{ maxWidth: '500px' }}>
+            <div className="modal-header">
+              <h2>开启通知提醒</h2>
+              <button className="modal-close" onClick={() => setShowGuideModal(false)}>&times;</button>
+            </div>
+            <div className="modal-body">
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>📱 获得更好的提醒体验</h4>
+                <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                  点击确定后，浏览器会请求通知权限。为了获得更好的提醒体验，建议您：
+                </p>
+                <ul style={{ marginLeft: '1.2rem', marginBottom: '1rem', lineHeight: '1.6' }}>
+                  <li>允许浏览器发送通知</li>
+                  <li>将本站添加到手机桌面，像App一样使用</li>
+                </ul>
+              </div>
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>🏠 添加到桌面教程</h4>
+                <p style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                  <strong>iPhone用户：</strong> Safari浏览器点击底部分享按钮 → 选择"添加到主屏幕"
+                </p>
+                <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                  <strong>Android用户：</strong> Chrome浏览器点击右上角菜单 → 选择"添加到主屏幕"
+                </p>
+                <a 
+                  href="https://zhuanlan.zhihu.com/p/33320627" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.9rem' }}
+                >
+                  📖 查看详细图文教程 →
+                </a>
+              </div>
+            </div>
+            <div className="modal-footer">
+              <button className="btn btn-primary" onClick={handleConfirmEnable}>
+                确定，开启通知
+              </button>
+              <button className="btn btn-secondary" onClick={() => setShowGuideModal(false)}>
+                取消
+              </button>
+            </div>
+          </div>
         </div>
       )}
       

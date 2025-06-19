@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSchedule } from '../context/ScheduleContext'
 import { useCurrentTime } from '../hooks/useCurrentTime'
 import { getCurrentTimeInMinutes, findCurrentActivity } from '../utils/timeUtils'
@@ -9,6 +9,7 @@ import NotificationSettings from '../components/NotificationSettings'
 
 const HomePage = () => {
   const { currentSchedule, quotes } = useSchedule()
+  const navigate = useNavigate()
   const currentTimeString = useCurrentTime()
   const [randomQuote, setRandomQuote] = useState('')
   const [currentActivity, setCurrentActivity] = useState(null)
@@ -29,6 +30,17 @@ const HomePage = () => {
       setCurrentActivity(activity)
     }
   }, [currentSchedule, currentTimeString]) // 依赖currentTimeString确保每分钟更新
+
+  // 处理来源点击
+  const handleSourceClick = (e) => {
+    if (currentSchedule && currentSchedule.source === '我的') {
+      e.preventDefault()
+      navigate('/my')
+    }
+  }
+
+  // 检查是否是自定义来源
+  const isCustomSource = currentSchedule && currentSchedule.source === '我的'
 
   return (
     <main className="main-content">
@@ -89,9 +101,18 @@ const HomePage = () => {
                 </div>
                 <div className="info-row">
                   <span className="info-label">来源：</span>
-                  <a href={currentSchedule.source_url} target="_blank" rel="noopener noreferrer">
-                    <span>{currentSchedule.source}</span>
-                  </a>
+                  {isCustomSource ? (
+                    <span 
+                      style={{ color: 'var(--primary-color)', cursor: 'pointer' }}
+                      onClick={handleSourceClick}
+                    >
+                      {currentSchedule.source}
+                    </span>
+                  ) : (
+                    <a href={currentSchedule.source_url} target="_blank" rel="noopener noreferrer">
+                      <span>{currentSchedule.source}</span>
+                    </a>
+                  )}
                 </div>
                 <div className="info-row">
                   <span className="info-label">描述：</span>

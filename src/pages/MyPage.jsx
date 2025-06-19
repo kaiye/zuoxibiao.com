@@ -161,7 +161,7 @@ const MyPage = () => {
           scenario: '自定义',
           category: '自定义',
           target_audience: '个人定制',
-          source: '用户创建',
+          source: '我的',
           source_url: '',
           schedule: parsedSchedule,
           additional_recommendations: [

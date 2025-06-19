@@ -30,7 +30,7 @@ const SchedulesPage = () => {
       {/* 页面标题 */}
       <section className="page-header">
         <div className="container">
-          <h1 className="page-title">选择适合您的作息时间表</h1>
+          <h1 className="page-title">推荐作息表</h1>
           <p className="page-subtitle">从权威机构和成功人士的作息建议中找到最适合您的时间安排</p>
         </div>
       </section>

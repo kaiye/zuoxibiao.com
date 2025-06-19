@@ -55,7 +55,28 @@ const Modal = ({ isOpen, onClose, schedule, onUseSchedule }) => {
     }
   }
 
+  // 早期返回检查
   if (!isOpen || !schedule) return null
+
+  // 处理来源点击
+  const handleSourceClick = () => {
+    if (schedule.source === '我的') {
+      // 关闭弹窗
+      onClose()
+      // 跳转到我的页面
+      if (location.pathname !== '/my' && location.pathname !== '/my.html') {
+        navigate('/my')
+      }
+    }
+  }
+
+  // 显示来源文本
+  const getSourceText = () => {
+    return schedule.source
+  }
+
+  // 检查是否是自定义来源
+  const isCustomSource = schedule.source === '我的'
 
   return (
     <div className="modal show">
@@ -77,9 +98,18 @@ const Modal = ({ isOpen, onClose, schedule, onUseSchedule }) => {
             </div>
             <div className="info-row">
               <span className="info-label">来源：</span>
-              <a href={schedule.source_url} target="_blank" rel="noopener noreferrer">
-                <span>{schedule.source}</span>
-              </a>
+              {isCustomSource ? (
+                <span 
+                  style={{ color: 'var(--primary-color)', cursor: 'pointer' }}
+                  onClick={handleSourceClick}
+                >
+                  {getSourceText()}
+                </span>
+              ) : (
+                <a href={schedule.source_url} target="_blank" rel="noopener noreferrer">
+                  <span>{getSourceText()}</span>
+                </a>
+              )}
             </div>
             <div className="info-row">
               <span className="info-label">描述：</span>
