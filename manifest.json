@@ -41,6 +41,9 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000"
+  "theme_color": "#10b981",
+  "description": "科学作息表管理工具，提供权威的作息建议，帮助您建立健康的生活节奏",
+  "categories": ["health", "lifestyle", "productivity"],
+  "lang": "zh-CN"
 }
 

@@ -824,21 +824,49 @@ body {
         display: none;
     }
     
+    /* 手机端导航栏绿色背景样式 */
+    .navbar {
+        background: #10b981 !important;
+        border-bottom: none;
+    }
+    
+    .navbar-brand {
+        color: white !important;
+    }
+    
+    .brand-text {
+        color: white !important;
+    }
+    
+    .mobile-menu-toggle span {
+        background: white !important;
+    }
+    
     .navbar-menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--bg-primary);
+        background: #10b981;
         box-shadow: var(--shadow-lg);
         flex-direction: column;
         padding: var(--space-6);
-        border-top: 1px solid var(--gray-200);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .navbar-menu.show {
         display: flex;
+    }
+    
+    .nav-link {
+        color: white !important;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.1) !important;
     }
     
     .mobile-menu-toggle {

@@ -6,14 +6,71 @@ const NotificationSettings = ({ currentSchedule }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [showGuideModal, setShowGuideModal] = useState(false)
+  const [showFallbackModal, setShowFallbackModal] = useState(false)
 
   if (!isSupported) {
     return (
       <div className="notification-settings">
-        <div className="notification-info">
-          <span className="notification-icon">ℹ️</span>
-          <span>您的浏览器不支持通知功能</span>
+        <div className="notification-prompt">
+          <div className="notification-info">
+            <span className="notification-icon">ℹ️</span>
+            <span>您的浏览器不支持通知功能</span>
+          </div>
+          <button 
+            className="btn btn-secondary"
+            onClick={() => setShowFallbackModal(true)}
+            style={{ fontSize: '0.9rem', padding: 'var(--space-2) var(--space-4)' }}
+          >
+            解决办法
+          </button>
         </div>
+        
+        {/* 不支持通知的解决方案弹窗 */}
+        {showFallbackModal && (
+          <div className="modal show">
+            <div className="modal-overlay" onClick={() => setShowFallbackModal(false)}></div>
+            <div className="modal-content" style={{ maxWidth: '500px' }}>
+              <div className="modal-header">
+                <h2>获得提醒功能</h2>
+                <button className="modal-close" onClick={() => setShowFallbackModal(false)}>&times;</button>
+              </div>
+              <div className="modal-body">
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>📱 推荐解决方案</h4>
+                  <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
+                    虽然当前浏览器不支持通知功能，但您可以通过以下方式获得更好的提醒体验：
+                  </p>
+                  <ul style={{ marginLeft: '1.2rem', marginBottom: '1rem', lineHeight: '1.6' }}>
+                    <li>将本站添加到手机桌面，像App一样使用</li>
+                    <li>使用支持通知的浏览器（如Chrome、Safari等）</li>
+                  </ul>
+                </div>
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <h4 style={{ marginBottom: '0.5rem', color: 'var(--text-primary)' }}>🏠 添加到桌面教程</h4>
+                  <p style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                    <strong>iPhone用户：</strong> Safari浏览器点击底部分享按钮 → 选择"添加到主屏幕"
+                  </p>
+                  <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                    <strong>Android用户：</strong> Chrome浏览器点击右上角菜单 → 选择"添加到主屏幕"
+                  </p>
+                  <a 
+                    href="https://zhuanlan.zhihu.com/p/33320627" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.9rem' }}
+                  >
+                    📖 查看详细图文教程 →
+                  </a>
+                </div>
+              </div>
+              <div className="modal-footer">
+                <button className="btn btn-primary" onClick={() => setShowFallbackModal(false)}>
+                  我知道了
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     )
   }
