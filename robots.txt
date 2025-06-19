@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# 网站地图
+Sitemap: https://zuoxibiao.com/sitemap.xml
+
+# 百度搜索引擎
+User-agent: Baiduspider
+Allow: /
+
+# 谷歌搜索引擎
+User-agent: Googlebot
+Allow: /
+
+# 必应搜索引擎
+User-agent: bingbot
+Allow: /
+
+# 360搜索引擎
+User-agent: 360Spider
+Allow: /
+
+# 搜狗搜索引擎
+User-agent: Sogou web spider
+Allow: /
+
+# 爬取延迟（秒）
+Crawl-delay: 1
