@@ -124,6 +124,11 @@ body {
     font-size: 1.25rem;
     color: var(--primary-color);
     text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.navbar-brand:hover {
+    opacity: 0.8;
 }
 
 .logo-img {
@@ -131,6 +136,7 @@ body {
     width: 40px;
     object-fit: contain;
     border-radius: var(--radius-md);
+    transform: translateY(-2px);
 }
 
 .brand-text {
@@ -331,9 +337,6 @@ body {
     margin-bottom: var(--space-12);
     background: var(--bg-primary);
     padding: var(--space-8);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
 }
 
 .filter-group {
@@ -406,6 +409,12 @@ body {
     overflow: hidden;
 }
 
+.custom-schedule-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .schedule-card::before {
     content: '';
     position: absolute;
@@ -454,6 +463,10 @@ body {
     margin-bottom: var(--space-5);
 }
 
+.custom-schedule-card .card-header {
+    flex: 1;
+}
+
 .card-title {
     font-size: 1.375rem;
     font-weight: 600;
@@ -480,7 +493,7 @@ body {
 }
 
 .card-category {
-    background: var(--primary-color);
+    background: var(--gray-400);
     color: white;
 }
 
@@ -869,7 +882,6 @@ body {
     }
     
     .card-meta {
-        flex-direction: column;
         gap: var(--space-2);
     }
     
@@ -997,10 +1009,7 @@ select:focus {
 .schedule-detail {
     margin-top: var(--space-12);
     background: var(--bg-primary);
-    border-radius: var(--radius-xl);
     padding: var(--space-8);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
 }
 
 .schedule-detail .schedule-info {
@@ -1031,4 +1040,475 @@ select:focus {
 .schedule-detail .info-row a:hover {
     color: var(--primary-dark);
     text-decoration: underline;
+}
+
+/* Notification Settings Styles */
+.notification-settings {
+    margin-top: var(--space-6);
+    padding: var(--space-6);
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.notification-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.notification-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.notification-icon {
+    font-size: 1.25rem;
+}
+
+.notification-enable-btn {
+    flex-shrink: 0;
+    padding: var(--space-3) var(--space-6);
+    font-size: 0.9rem;
+    min-width: 120px;
+}
+
+.notification-enabled {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    color: var(--success);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.notification-enabled .notification-icon {
+    color: var(--success);
+}
+
+.notification-buttons {
+    display: flex;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+.notification-status-btn {
+    flex-shrink: 0;
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.85rem;
+    min-width: 80px;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.notification-enable-btn.loading {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.notification-test-btn {
+    flex-shrink: 0;
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.85rem;
+    min-width: 80px;
+}
+
+.notification-error {
+    margin-top: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--error);
+    font-size: 0.9rem;
+    background: rgba(239, 68, 68, 0.1);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.notification-error .notification-icon {
+    color: var(--error);
+}
+
+@media (max-width: 768px) {
+    .notification-prompt {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .notification-enable-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .notification-enabled {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-3);
+        text-align: center;
+    }
+    
+    .notification-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-2);
+    }
+    
+    .notification-status-btn,
+    .notification-test-btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* My Page Styles */
+.my-schedule-section {
+    padding: var(--space-16) 0;
+    background: var(--bg-secondary);
+}
+
+.current-schedule-card {
+    margin-bottom: var(--space-16);
+    background: var(--bg-primary);
+    padding: var(--space-8);
+}
+
+.no-schedule {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--text-secondary);
+}
+
+.no-schedule a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.no-schedule a:hover {
+    text-decoration: underline;
+}
+
+.custom-schedules-section {
+    background: var(--bg-primary);
+    padding: var(--space-8);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.create-schedule-btn {
+    flex-shrink: 0;
+}
+
+.create-schedule-form {
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--gray-200);
+}
+
+.create-schedule-form h3 {
+    margin-bottom: var(--space-6);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-3);
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.form-label-with-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+}
+
+.copy-example-btn {
+    font-size: 0.8rem;
+    padding: var(--space-2) var(--space-3);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: var(--space-4);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-normal);
+    font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 300px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    line-height: 1.5;
+}
+
+.form-hint {
+    margin-top: var(--space-3);
+    padding: var(--space-4);
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary-color);
+}
+
+.form-hint p {
+    margin-bottom: var(--space-2);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.form-hint p:last-child {
+    margin-bottom: 0;
+}
+
+.form-hint code {
+    background: var(--gray-200);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+}
+
+.error-message {
+    margin-top: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--error);
+    font-size: 0.9rem;
+}
+
+.custom-schedules-list {
+    margin-top: var(--space-8);
+}
+
+.no-custom-schedules {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.card-custom {
+    background: var(--gray-400);
+    color: #fff;
+}
+
+.card-date {
+    background: var(--gray-200);
+    color: var(--text-primary);
+    font-size: 0.7rem;
+}
+
+.card-actions {
+    margin-top: var(--space-4);
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.custom-schedule-card .card-actions {
+    margin-top: auto;
+    align-self: flex-end;
+    width: 100%;
+}
+
+.btn-small {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.85rem;
+    min-width: auto;
+}
+
+.btn-danger {
+    background: var(--error);
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+.limit-message {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Toast 样式 */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--gray-200);
+    min-width: 300px;
+    max-width: 500px;
+    z-index: 9999;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all var(--transition-normal);
+}
+
+.toast-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    padding: var(--space-4) var(--space-5);
+    gap: var(--space-3);
+}
+
+.toast-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.toast-message {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.toast-close:hover {
+    background: var(--gray-200);
+    color: var(--text-primary);
+}
+
+.toast-success {
+    border-left: 4px solid var(--success);
+}
+
+.toast-success .toast-icon {
+    color: var(--success);
+}
+
+.toast-error {
+    border-left: 4px solid var(--error);
+}
+
+.toast-error .toast-icon {
+    color: var(--error);
+}
+
+.toast-warning {
+    border-left: 4px solid var(--warning);
+}
+
+.toast-warning .toast-icon {
+    color: var(--warning);
+}
+
+.toast-info {
+    border-left: 4px solid var(--info);
+}
+
+.toast-info .toast-icon {
+    color: var(--info);
+}
+
+@media (max-width: 768px) {
+    .toast {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+        transform: translateY(-100px);
+    }
+    
+    .toast-show {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .create-schedule-btn {
+        width: 100%;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .card-actions .btn {
+        width: 100%;
+    }
 }

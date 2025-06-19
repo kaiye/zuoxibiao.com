@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSchedule } from '../context/ScheduleContext'
 import ScheduleCard from '../components/ScheduleCard'
+import NotificationSettings from '../components/NotificationSettings'
 
 const SchedulesPage = () => {
-  const { schedules, openModal } = useSchedule()
+  const { schedules, currentSchedule, openModal } = useSchedule()
   const navigate = useNavigate()
   const [ageGroupFilter, setAgeGroupFilter] = useState('all')
   const [scenarioFilter, setScenarioFilter] = useState('all')
@@ -87,6 +88,15 @@ const SchedulesPage = () => {
           )}
         </div>
       </section>
+
+      {/* 通知设置 */}
+      {currentSchedule && (
+        <section className="notification-section" style={{ backgroundColor: 'var(--bg-primary)', padding: 'var(--space-12) 0' }}>
+          <div className="container">
+            <NotificationSettings currentSchedule={currentSchedule} />
+          </div>
+        </section>
+      )}
     </main>
   )
 }

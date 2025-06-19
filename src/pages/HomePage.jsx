@@ -5,6 +5,7 @@ import { useCurrentTime } from '../hooks/useCurrentTime'
 import { getCurrentTimeInMinutes, findCurrentActivity } from '../utils/timeUtils'
 import Timeline from '../components/Timeline'
 import Recommendations from '../components/Recommendations'
+import NotificationSettings from '../components/NotificationSettings'
 
 const HomePage = () => {
   const { currentSchedule, quotes } = useSchedule()
@@ -103,6 +104,9 @@ const HomePage = () => {
               
               {/* 补充建议 */}
               <Recommendations schedule={currentSchedule} />
+              
+              {/* 通知设置 */}
+              <NotificationSettings currentSchedule={currentSchedule} />
             </div>
           )}
         </div>

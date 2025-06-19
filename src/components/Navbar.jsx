@@ -16,16 +16,19 @@ const Navbar = () => {
     if (path === '/schedules' && (location.pathname === '/schedules' || location.pathname === '/schedules.html')) {
       return true
     }
+    if (path === '/my' && (location.pathname === '/my' || location.pathname === '/my.html')) {
+      return true
+    }
     return false
   }
 
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           <img src="/favicon.png" alt="Logo" className="logo-img" />
           <span className="brand-text">作息表 zuoxibiao.com</span>
-        </div>
+        </Link>
         <div className={`navbar-menu ${isMobileMenuOpen ? 'show' : ''}`}>
           <Link 
             to="/" 
@@ -41,13 +44,13 @@ const Navbar = () => {
           >
             推荐作息表
           </Link>
-          <a 
-            href="#about" 
-            className="nav-link"
+          <Link 
+            to="/my" 
+            className={`nav-link ${isActive('/my') ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            关于
-          </a>
+            我的
+          </Link>
         </div>
         <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
           <span></span>

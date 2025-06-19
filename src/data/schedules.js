@@ -755,6 +755,402 @@ export const schedulesData = {
           "note": "一致性原则：无论旅行或比赛安排如何，都保持相同的作息和恢复routine"
         }
       ]
+    },
+    {
+      "id": "weight-loss-scientific",
+      "title": "科学减肥作息表",
+      "description": "基于北京协和医院专家建议的健康减肥时间安排",
+      "age_group": "成年人",
+      "scenario": "其他",
+      "category": "健康养生",
+      "target_audience": "减肥人群",
+      "source": "北京协和医院",
+      "source_url": "https://www.pumch.cn/detail/11551.html",
+      "schedule": [
+        {
+          "time": "6:00",
+          "activity": "起床",
+          "description": "协和医院专家建议的规律作息，早6点起床有助于建立健康生物钟"
+        },
+        {
+          "time": "6:00-6:30",
+          "activity": "晨间补水",
+          "description": "起床后立即补充水分，促进新陈代谢启动"
+        },
+        {
+          "time": "7:00-8:00",
+          "activity": "营养早餐",
+          "description": "科学减肥的关键是营养均衡的早餐，为一天提供充足能量"
+        },
+        {
+          "time": "8:00-12:00",
+          "activity": "上午活动时间",
+          "description": "上午是身体各部分功能开始活跃的关键时期，适合安排重要工作"
+        },
+        {
+          "time": "12:00-13:00",
+          "activity": "科学午餐",
+          "description": "控制热量摄入，选择高纤维低脂食物，细嚼慢咽"
+        },
+        {
+          "time": "13:00-14:00",
+          "activity": "午休",
+          "description": "短暂午休有助于下午精神状态和代谢调节"
+        },
+        {
+          "time": "14:00-18:00",
+          "activity": "下午工作时间",
+          "description": "保持正常工作节奏，避免久坐不动"
+        },
+        {
+          "time": "18:00-19:00",
+          "activity": "适量晚餐",
+          "description": "晚餐要清淡，避免高热量食物，为夜间代谢做准备"
+        },
+        {
+          "time": "19:00-21:00",
+          "activity": "轻度运动",
+          "description": "饭后适当运动有助消化和热量消耗，如散步、瑜伽等"
+        },
+        {
+          "time": "21:00-22:00",
+          "activity": "放松时间",
+          "description": "避免剧烈运动，准备进入睡眠状态"
+        },
+        {
+          "time": "22:00",
+          "activity": "准备睡觉",
+          "description": "协和医院专家强调：想减肥不能睡太晚，充足睡眠对减肥至关重要"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "period": "睡眠管理",
+          "note": "每天保证7-8小时睡眠，晚10点睡早6点起的规律作息"
+        },
+        {
+          "period": "饮食原则",
+          "note": "减肥方式一定要科学，建议到正规医院营养科咨询专家"
+        },
+        {
+          "period": "运动建议",
+          "note": "避免过度运动，选择适合自己体质的运动方式"
+        },
+        {
+          "period": "心理调节",
+          "note": "保持积极心态，避免过度焦虑，减肥是一个循序渐进的过程"
+        }
+      ]
+    },
+    {
+      "id": "top-student-schedule",
+      "title": "学霸高效作息表",
+      "description": "根据清华北大学霸经验总结的科学学习时间安排",
+      "age_group": "青少年",
+      "scenario": "学生",
+      "category": "学生",
+      "target_audience": "高中生、大学生",
+      "source": "新浪教育频道",
+      "source_url": "https://edu.sina.cn/gaokao/qsbk/2018-01-27/detail-ifyqyuhy6718055.d.html",
+      "schedule": [
+        {
+          "time": "6:00-7:30",
+          "activity": "黄金晨学时间",
+          "description": "学霸们强调：这是头脑最清醒且体力最充沛的时间，是学习的黄金时间"
+        },
+        {
+          "time": "6:00-6:30",
+          "activity": "记忆类学习",
+          "description": "安排记忆力课程复习，如英语单词、文科知识点等"
+        },
+        {
+          "time": "6:30-7:00",
+          "activity": "晨练",
+          "description": "半小时身体锻炼，学霸强调体力竞争和脑力竞争同样重要"
+        },
+        {
+          "time": "7:00-7:30",
+          "activity": "早餐时间",
+          "description": "营养早餐为大脑提供充足能量"
+        },
+        {
+          "time": "8:00-11:30",
+          "activity": "上午专注学习",
+          "description": "处理最难的学习内容，大脑清醒时攻克重点难点"
+        },
+        {
+          "time": "11:30-12:30",
+          "activity": "午餐休息",
+          "description": "适当放松，为下午学习做准备"
+        },
+        {
+          "time": "12:30-13:30",
+          "activity": "午休",
+          "description": "短暂午休恢复精力，提高下午学习效率"
+        },
+        {
+          "time": "14:00-17:30",
+          "activity": "下午高效时段",
+          "description": "继续重点学习，保持高度专注"
+        },
+        {
+          "time": "17:30-18:30",
+          "activity": "运动放松",
+          "description": "一周安排2-3天锻炼时间，身体锻炼不能少"
+        },
+        {
+          "time": "18:30-19:30",
+          "activity": "晚餐时间",
+          "description": "合理饮食，保持体力"
+        },
+        {
+          "time": "19:30-22:00",
+          "activity": "晚间复习",
+          "description": "复习当天内容，预习明天课程，查漏补缺"
+        },
+        {
+          "time": "22:00-22:30",
+          "activity": "总结规划",
+          "description": "总结学习效果，制定明天学习计划"
+        },
+        {
+          "time": "22:30",
+          "activity": "睡觉",
+          "description": "保证充足睡眠，切勿突破生理极限"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "period": "学习理念",
+          "note": "时间比任何东西都珍贵，合理安排每日时间，最大效率提高学习效果"
+        },
+        {
+          "period": "身心平衡",
+          "note": "学霸们强调：没有周末没有假期，但要注意不要过度透支身体"
+        },
+        {
+          "period": "作息规律",
+          "note": "最重要的是合理安排作息时间，切勿突破生理极限，得不偿失"
+        },
+        {
+          "period": "坚持原则",
+          "note": "清晨起床，半夜卧床，持之以恒是成功的关键"
+        }
+      ]
+    },
+    {
+      "id": "kaoyan-scientific",
+      "title": "科学考研作息表",
+      "description": "基于考研帮推荐的科学作息时间安排，严格执行时间管理",
+      "age_group": "成年人",
+      "scenario": "学生",
+      "category": "学生",
+      "target_audience": "考研人群",
+      "source": "考研帮官网",
+      "source_url": "https://www.kaoyan.com/article/1/7/22a01d1dde5b454c84de41e8df0bc8e7",
+      "schedule": [
+        {
+          "time": "6:30",
+          "activity": "起床",
+          "description": "严格执行起床时间，开始新一天的学习计划"
+        },
+        {
+          "time": "6:40-7:00",
+          "activity": "洗漱和晨跑",
+          "description": "10分钟洗漱+10分钟跑步，晨间运动能够提高记忆力"
+        },
+        {
+          "time": "7:10-7:30",
+          "activity": "营养早餐",
+          "description": "少油少糖有汤，吃七成饱，为大脑提供充足能量"
+        },
+        {
+          "time": "7:40-8:20",
+          "activity": "背英语单词",
+          "description": "利用早晨记忆黄金时间背诵英语单词"
+        },
+        {
+          "time": "8:30-11:40",
+          "activity": "数学专业课复习",
+          "description": "复习数学、专业课，做练习要快，看着手表计时提高效率"
+        },
+        {
+          "time": "11:50-12:20",
+          "activity": "午餐",
+          "description": "有肉多菜，九成饱，为下午学习提供能量"
+        },
+        {
+          "time": "12:20-13:00",
+          "activity": "午睡",
+          "description": "午睡时间不超过一小时，恢复精力"
+        },
+        {
+          "time": "13:00-17:00",
+          "activity": "综合练习时间",
+          "description": "做英语、数学、政治和专业课练习，保持高强度学习"
+        },
+        {
+          "time": "17:00-17:30",
+          "activity": "体育锻炼",
+          "description": "跑步和力量训练（如哑铃运动），缓解学习压力"
+        },
+        {
+          "time": "17:30-18:00",
+          "activity": "晚餐",
+          "description": "八成饱，多吃青菜少吃肉，保持身体健康"
+        },
+        {
+          "time": "18:00-22:00",
+          "activity": "晚间学习",
+          "description": "看书做练习，4小时高强度学习时间"
+        },
+        {
+          "time": "22:00-23:00",
+          "activity": "锻炼洗漱",
+          "description": "适当锻炼、洗漱、洗澡，为睡眠做准备"
+        },
+        {
+          "time": "23:00-23:30",
+          "activity": "睡前背单词",
+          "description": "利用睡前时间再次巩固英语单词记忆"
+        },
+        {
+          "time": "23:30-6:30",
+          "activity": "睡觉",
+          "description": "严格执行睡眠时间，保证7小时充足睡眠"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "period": "作息规律",
+          "note": "严格按照时间表执行，保持作息规律是成功的关键"
+        },
+        {
+          "period": "学习方法",
+          "note": "做练习时看着手表计时，提高学习效率和时间观念"
+        },
+        {
+          "period": "饮食建议",
+          "note": "早餐七成饱、午餐九成饱、晚餐八成饱，合理控制饮食"
+        },
+        {
+          "period": "运动安排",
+          "note": "每天安排两次运动：晨跑提高记忆力，晚间锻炼缓解压力"
+        },
+        {
+          "period": "灵活调整",
+          "note": "可根据个人情况灵活调整计划，但要保持整体节奏"
+        }
+      ]
+    },
+    {
+      "id": "worker-996",
+      "title": "牛马作息表",
+      "description": "当代打工人的真实写照：007模式下的艰难求生指南",
+      "age_group": "成年人",
+      "scenario": "上班族",
+      "category": "搞笑",
+      "target_audience": "996/007打工人",
+      "source": "广大网友血泪经验总结",
+      "source_url": "https://www.zhihu.com/topic/19551137",
+      "schedule": [
+        {
+          "time": "6:30",
+          "activity": "闹钟响起第一遍",
+          "description": "习惯性按掉闹钟，继续做5分钟发财梦"
+        },
+        {
+          "time": "7:00",
+          "activity": "真正起床",
+          "description": "在第6个闹钟响起后，终于意识到再不起床就要迟到了"
+        },
+        {
+          "time": "7:00-7:15",
+          "activity": "光速洗漱",
+          "description": "创造人类洗漱速度记录，牙刷还在嘴里就开始换衣服"
+        },
+        {
+          "time": "7:15-8:30",
+          "activity": "地铁炼狱时间",
+          "description": "被挤成肉饼在地铁里，一边刷手机一边祈祷不要晚点"
+        },
+        {
+          "time": "8:30-8:59",
+          "activity": "卡点冲刺",
+          "description": "百米冲刺速度赶到公司，在最后一秒打卡成功"
+        },
+        {
+          "time": "9:00-12:00",
+          "activity": "上午假装工作",
+          "description": "开始一天的演技表演，在摸鱼和干活之间无缝切换"
+        },
+        {
+          "time": "12:00-13:00",
+          "activity": "抢外卖大战",
+          "description": "和全楼人抢电梯抢外卖，午餐时间比工作还激烈"
+        },
+        {
+          "time": "13:00-14:00",
+          "activity": "趴桌午休",
+          "description": "在办公桌上艰难入睡，梦里都是KPI和加班"
+        },
+        {
+          "time": "14:00-18:00",
+          "activity": "下午真正开始工作",
+          "description": "领导出现频率增加，开始真正的工作状态"
+        },
+        {
+          "time": "18:00-20:00",
+          "activity": "加班第一阶段",
+          "description": "名义上的下班时间，实际上加班才刚刚开始"
+        },
+        {
+          "time": "20:00-22:00",
+          "activity": "加班第二阶段",
+          "description": "和同事一起叫外卖，在公司吃第二顿饭"
+        },
+        {
+          "time": "22:00-23:30",
+          "activity": "回家路上",
+          "description": "拖着疲惫身躯踏上归途，地铁上已经开始打瞌睡"
+        },
+        {
+          "time": "23:30-1:00",
+          "activity": "报复性熬夜",
+          "description": "刷手机、看视频、打游戏，企图找回属于自己的时间"
+        },
+        {
+          "time": "1:00-6:30",
+          "activity": "不足6小时睡眠",
+          "description": "在焦虑和疲惫中入睡，梦里还在回复工作消息"
+        }
+      ],
+      "additional_recommendations": [
+        {
+          "period": "周末",
+          "note": "理论上的休息时间，实际上在家处理工作消息和补觉"
+        },
+        {
+          "period": "节假日",
+          "note": "法定假日？那是什么？只知道要加班费"
+        },
+        {
+          "period": "年假",
+          "note": "年假是传说中的存在，即使有也不敢请"
+        },
+        {
+          "period": "健康状况",
+          "note": "腰椎间盘突出、颈椎病、脱发、眼干——职业病全套装备"
+        },
+        {
+          "period": "心理状态",
+          "note": "在'我可以'和'我不行'之间反复横跳"
+        },
+        {
+          "period": "人生感悟",
+          "note": "每天都想辞职，每天都觉得明天会更好"
+        }
+      ]
     }
   ]
 };
