@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer-section">
             <h3>联系我们</h3>
-            <p>如果您有任何建议或问题，欢迎通过微信公众号&quot;前端培训&quot;联系我们</p>
+            <p>如果您有任何建议或问题，欢迎通过微信公众号&quot;猫哥ai编程&quot;联系我们</p>
           </div>
         </div>
         <div className="footer-bottom">
