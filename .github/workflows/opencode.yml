@@ -81,7 +81,11 @@ jobs:
           echo ""
           echo "Environment variables:"
           echo "ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:0:10}..."
-          echo "ANTHROPIC_BASE_URL: $ANTHROPIC_BASE_URL"
+          echo "ANTHROPIC_BASE_URL: '$ANTHROPIC_BASE_URL'"
+          echo "ANTHROPIC_BASE_URL length: ${#ANTHROPIC_BASE_URL}"
+          echo ""
+          echo "Testing URL format:"
+          echo "$ANTHROPIC_BASE_URL/v1/messages"
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
