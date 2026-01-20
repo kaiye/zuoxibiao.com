@@ -4,7 +4,8 @@
     "anthropic": {
       "options": {
         "apiKey": "{env:ANTHROPIC_API_KEY}",
-        "baseURL": "{env:ANTHROPIC_BASE_URL}"
+        "baseURL": "{env:ANTHROPIC_BASE_URL}",
+        "timeout": 30000
       }
     }
   },
@@ -24,7 +25,7 @@
         "webfetch": "allow",
         "doom_loop": "allow"
       },
-      "steps": 50
+      "steps": 20
     }
   }
 }
