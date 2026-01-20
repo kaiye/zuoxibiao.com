@@ -7,9 +7,14 @@ yarn-error.log*
 # Production builds
 dist/
 build/
+out/
 
 # Development
 .vite/
+.next/
+
+# Claude Code
+.claude/
 
 # Environment variables
 .env
