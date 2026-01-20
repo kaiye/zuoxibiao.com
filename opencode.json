@@ -3,6 +3,7 @@
   "provider": {
     "anthropic": {
       "options": {
+        "apiKey": "{env:ANTHROPIC_API_KEY}",
         "baseURL": "{env:ANTHROPIC_BASE_URL}"
       }
     }
