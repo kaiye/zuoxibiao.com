@@ -1,0 +1,31 @@
+name: Test API Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test API connectivity
+        run: |
+          echo "Testing connection to packyapi.com..."
+
+          # Test basic connectivity
+          curl -v -m 10 https://www.packyapi.com 2>&1 | head -20 || echo "Connection failed"
+
+          echo ""
+          echo "Testing Anthropic API endpoint..."
+
+          # Test API endpoint
+          curl -v -m 30 -X POST https://www.packyapi.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d '{
+              "model": "claude-sonnet-4-5-20250929",
+              "max_tokens": 10,
+              "messages": [{"role": "user", "content": "hi"}]
+            }' 2>&1 || echo "API call failed"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
