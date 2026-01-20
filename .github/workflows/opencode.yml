@@ -101,7 +101,7 @@ jobs:
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
-                "anthropic": {
+                "custom": {
                   "options": {
                     "apiKey": "{env:ANTHROPIC_API_KEY}",
                     "baseURL": "{env:ANTHROPIC_BASE_URL}",
@@ -180,7 +180,7 @@ jobs:
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
-                "anthropic": {
+                "custom": {
                   "options": {
                     "apiKey": "{env:ANTHROPIC_API_KEY}",
                     "baseURL": "{env:ANTHROPIC_BASE_URL}",
