@@ -101,11 +101,17 @@ jobs:
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
-                "custom": {
+                "anthropic": {
+                  "npm": "@ai-sdk/anthropic",
+                  "name": "Anthropic Claude (Proxy)",
                   "options": {
-                    "apiKey": "{env:ANTHROPIC_API_KEY}",
-                    "baseURL": "{env:ANTHROPIC_BASE_URL}",
-                    "timeout": 30000
+                    "baseURL": "{env:ANTHROPIC_BASE_URL}/v1",
+                    "apiKey": "{env:ANTHROPIC_API_KEY}"
+                  },
+                  "models": {
+                    "claude-sonnet-4-5-20250929": {
+                      "name": "Claude Sonnet 4.5"
+                    }
                   }
                 }
               },
@@ -180,11 +186,17 @@ jobs:
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
-                "custom": {
+                "anthropic": {
+                  "npm": "@ai-sdk/anthropic",
+                  "name": "Anthropic Claude (Proxy)",
                   "options": {
-                    "apiKey": "{env:ANTHROPIC_API_KEY}",
-                    "baseURL": "{env:ANTHROPIC_BASE_URL}",
-                    "timeout": 30000
+                    "baseURL": "{env:ANTHROPIC_BASE_URL}/v1",
+                    "apiKey": "{env:ANTHROPIC_API_KEY}"
+                  },
+                  "models": {
+                    "claude-sonnet-4-5-20250929": {
+                      "name": "Claude Sonnet 4.5"
+                    }
                   }
                 }
               },
