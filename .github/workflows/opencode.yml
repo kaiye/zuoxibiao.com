@@ -68,6 +68,24 @@ jobs:
         if: steps.check_permissions.outputs.result == 'true'
         uses: actions/checkout@v4
 
+      # 步骤 2.5: 调试配置（仅当权限检查通过）
+      - name: Debug OpenCode Configuration
+        if: steps.check_permissions.outputs.result == 'true'
+        run: |
+          echo "=== OpenCode Configuration Debug ==="
+          echo "Config file exists:"
+          ls -la opencode.json || echo "opencode.json not found"
+          echo ""
+          echo "Config file content:"
+          cat opencode.json || echo "Cannot read opencode.json"
+          echo ""
+          echo "Environment variables:"
+          echo "ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:0:10}..."
+          echo "ANTHROPIC_BASE_URL: $ANTHROPIC_BASE_URL"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+
       # 步骤 3: 运行 OpenCode（仅当权限检查通过）
       - name: Run OpenCode
         if: steps.check_permissions.outputs.result == 'true'
