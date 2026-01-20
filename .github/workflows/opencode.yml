@@ -94,6 +94,37 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          OPENCODE_CONFIG_CONTENT: |
+            {
+              "provider": {
+                "anthropic": {
+                  "options": {
+                    "apiKey": "{env:ANTHROPIC_API_KEY}",
+                    "baseURL": "{env:ANTHROPIC_BASE_URL}",
+                    "timeout": 30000
+                  }
+                }
+              },
+              "agent": {
+                "build": {
+                  "permission": {
+                    "question": "deny",
+                    "read": "allow",
+                    "edit": "allow",
+                    "write": "allow",
+                    "bash": "allow",
+                    "glob": "allow",
+                    "grep": "allow",
+                    "task": "allow",
+                    "todowrite": "allow",
+                    "todoread": "allow",
+                    "webfetch": "allow",
+                    "doom_loop": "allow"
+                  },
+                  "steps": 20
+                }
+              }
+            }
         with:
           model: anthropic/claude-sonnet-4-5-20250929
 
@@ -142,6 +173,37 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          OPENCODE_CONFIG_CONTENT: |
+            {
+              "provider": {
+                "anthropic": {
+                  "options": {
+                    "apiKey": "{env:ANTHROPIC_API_KEY}",
+                    "baseURL": "{env:ANTHROPIC_BASE_URL}",
+                    "timeout": 30000
+                  }
+                }
+              },
+              "agent": {
+                "build": {
+                  "permission": {
+                    "question": "deny",
+                    "read": "allow",
+                    "edit": "allow",
+                    "write": "allow",
+                    "bash": "allow",
+                    "glob": "allow",
+                    "grep": "allow",
+                    "task": "allow",
+                    "todowrite": "allow",
+                    "todoread": "allow",
+                    "webfetch": "allow",
+                    "doom_loop": "allow"
+                  },
+                  "steps": 20
+                }
+              }
+            }
         with:
           model: anthropic/claude-sonnet-4-5-20250929
           prompt: |
