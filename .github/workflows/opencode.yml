@@ -71,6 +71,7 @@ jobs:
       # 步骤 3: 运行 OpenCode（仅当权限检查通过）
       - name: Run OpenCode
         if: steps.check_permissions.outputs.result == 'true'
+        timeout-minutes: 10
         uses: anomalyco/opencode/github@latest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -118,6 +119,7 @@ jobs:
 
       - name: Review PR with OpenCode
         if: steps.check_author.outputs.result == 'true'
+        timeout-minutes: 10
         uses: anomalyco/opencode/github@latest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
