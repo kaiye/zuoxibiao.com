@@ -96,8 +96,6 @@ jobs:
         timeout-minutes: 10
         uses: anomalyco/opencode/github@latest
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
@@ -105,8 +103,8 @@ jobs:
                   "npm": "@ai-sdk/anthropic",
                   "name": "Anthropic Claude (Proxy)",
                   "options": {
-                    "baseURL": "{env:ANTHROPIC_BASE_URL}/v1",
-                    "apiKey": "{env:ANTHROPIC_API_KEY}"
+                    "baseURL": "${{ vars.ANTHROPIC_BASE_URL }}",
+                    "apiKey": "${{ secrets.ANTHROPIC_API_KEY }}"
                   },
                   "models": {
                     "claude-sonnet-4-5-20250929": {
@@ -115,25 +113,7 @@ jobs:
                   }
                 }
               },
-              "agent": {
-                "build": {
-                  "permission": {
-                    "question": "deny",
-                    "read": "allow",
-                    "edit": "allow",
-                    "write": "allow",
-                    "bash": "allow",
-                    "glob": "allow",
-                    "grep": "allow",
-                    "task": "allow",
-                    "todowrite": "allow",
-                    "todoread": "allow",
-                    "webfetch": "allow",
-                    "doom_loop": "allow"
-                  },
-                  "steps": 20
-                }
-              }
+              "model": "anthropic/claude-sonnet-4-5-20250929"
             }
         with:
           model: anthropic/claude-sonnet-4-5-20250929
@@ -181,8 +161,6 @@ jobs:
         timeout-minutes: 10
         uses: anomalyco/opencode/github@latest
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
@@ -190,8 +168,8 @@ jobs:
                   "npm": "@ai-sdk/anthropic",
                   "name": "Anthropic Claude (Proxy)",
                   "options": {
-                    "baseURL": "{env:ANTHROPIC_BASE_URL}/v1",
-                    "apiKey": "{env:ANTHROPIC_API_KEY}"
+                    "baseURL": "${{ vars.ANTHROPIC_BASE_URL }}",
+                    "apiKey": "${{ secrets.ANTHROPIC_API_KEY }}"
                   },
                   "models": {
                     "claude-sonnet-4-5-20250929": {
@@ -200,25 +178,7 @@ jobs:
                   }
                 }
               },
-              "agent": {
-                "build": {
-                  "permission": {
-                    "question": "deny",
-                    "read": "allow",
-                    "edit": "allow",
-                    "write": "allow",
-                    "bash": "allow",
-                    "glob": "allow",
-                    "grep": "allow",
-                    "task": "allow",
-                    "todowrite": "allow",
-                    "todoread": "allow",
-                    "webfetch": "allow",
-                    "doom_loop": "allow"
-                  },
-                  "steps": 20
-                }
-              }
+              "model": "anthropic/claude-sonnet-4-5-20250929"
             }
         with:
           model: anthropic/claude-sonnet-4-5-20250929
