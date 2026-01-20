@@ -6,5 +6,24 @@
         "baseURL": "{env:ANTHROPIC_BASE_URL}"
       }
     }
+  },
+  "agent": {
+    "build": {
+      "permission": {
+        "question": "deny",
+        "read": "allow",
+        "edit": "allow",
+        "write": "allow",
+        "bash": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "task": "allow",
+        "todowrite": "allow",
+        "todoread": "allow",
+        "webfetch": "allow",
+        "doom_loop": "allow"
+      },
+      "steps": 50
+    }
   }
 }
