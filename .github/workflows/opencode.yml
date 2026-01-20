@@ -88,7 +88,7 @@ jobs:
           echo "$ANTHROPIC_BASE_URL/v1/messages"
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
 
       # 步骤 3: 运行 OpenCode（仅当权限检查通过）
       - name: Run OpenCode
@@ -97,7 +97,7 @@ jobs:
         uses: anomalyco/opencode/github@latest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
@@ -176,7 +176,7 @@ jobs:
         uses: anomalyco/opencode/github@latest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
