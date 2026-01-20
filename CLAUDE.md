@@ -4,40 +4,87 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Chinese health and wellness website (zuoxibiao.com) that displays an optimal daily schedule with health tips. It's a static Jekyll site hosted on GitHub Pages focusing on healthy living routines and traditional Chinese health wisdom.
+This is a Chinese health and wellness website (zuoxibiao.com) that displays optimal daily schedules with health tips. It's a Next.js 15 application with static export, deployed to Cloudflare Pages.
 
 ## Architecture
 
-- **Static Site**: Pure HTML/CSS/JavaScript with Jekyll for GitHub Pages
-- **Single Page Application**: Main content in `index.html` with dynamic current time highlighting
-- **Content Structure**:
-  - `index.html`: Main page with health schedule timeline
-  - `_layouts/default.html`: Jekyll layout template (minimal)
-  - `css/style_1.0.0.css`: Main stylesheet
-  - `maxim.txt`: Health-related quotes loaded via AJAX
-  - `js/jquery_1.4.2.min.js`: jQuery library for interactivity
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Rendering**: Static Export (`output: 'export'`)
+- **Deployment**: Cloudflare Pages via GitHub Actions
+- **State Management**: React Context + localStorage
+
+## Project Structure
+
+```
+app/                    # Next.js App Router pages
+├── layout.tsx          # Root layout with providers
+├── page.tsx            # Home page
+├── globals.css         # Global styles
+├── schedules/page.tsx  # Schedule selection page
+└── my/page.tsx         # Custom schedule management
+
+components/             # React components
+├── providers/          # Context providers
+├── pages/              # Page client components
+├── Navbar.tsx          # Navigation
+├── Footer.tsx          # Footer
+├── Modal.tsx           # Modal dialogs
+├── Timeline.tsx        # Schedule timeline
+└── ScheduleCard.tsx    # Schedule cards
+
+hooks/                  # Custom React hooks
+├── useCurrentTime.ts   # Real-time clock
+├── useToast.ts         # Toast notifications
+└── useNotifications.ts # Browser notifications
+
+lib/                    # Utilities and data
+├── schedules.ts        # Schedule data (17 schedules)
+└── timeUtils.ts        # Time parsing utilities
+
+types/                  # TypeScript definitions
+└── schedule.ts
+
+public/                 # Static assets
+├── favicon.png
+├── favicons/
+├── manifest.json
+├── robots.txt
+└── sitemap.xml
+```
 
 ## Key Features
 
-- **Real-time Schedule Highlighting**: JavaScript automatically highlights the current time period in the health schedule
-- **Random Health Quotes**: Loads random motivational quotes about health from `maxim.txt`
-- **Responsive Timeline**: Scrolls to and highlights current time period based on system time
-- **Analytics**: Baidu Analytics integration for Chinese market
+- **Real-time Schedule Highlighting**: Automatically highlights current time period
+- **Multiple Schedules**: 17 schedules from WHO, Harvard, Tsinghua, etc.
+- **Custom Schedules**: Users can create and manage personal schedules
+- **Responsive Design**: Mobile-first responsive UI
+- **SEO Optimized**: Metadata API, sitemap, robots.txt
 
 ## Development
 
-Since this is a static Jekyll site for GitHub Pages:
+```bash
+# Install dependencies
+npm install
 
-- **Deployment**: Automatic via GitHub Pages when pushing to `gh-pages` branch
-- **Domain**: Custom domain configured via `CNAME` file (zuoxibiao.com)
-- **No Build Process**: Direct HTML/CSS/JS files, no compilation needed
-- **Content Updates**: Edit `index.html` directly for schedule content, `maxim.txt` for quotes
+# Start dev server
+npm run dev
 
-## File Structure
+# Build for production
+npm run build
 
-- `index.html`: Main health schedule page with embedded JavaScript
-- `_config.yml`: Jekyll configuration (minimal - just baseurl)
-- `maxim.txt`: Newline-separated health quotes/proverbs
-- `css/style_1.0.0.css`: All styling for the site
-- `img/`: Logo and background images
-- `CNAME`: Domain configuration for GitHub Pages
+# Output directory: out/
+```
+
+## Deployment
+
+- **CI/CD**: GitHub Actions (`.github/workflows/deploy.yml`)
+- **Platform**: Cloudflare Pages
+- **Domain**: https://zuoxibiao.com
+- **Trigger**: Push to `main` branch
+
+## Important Notes
+
+- All interactive components use `'use client'` directive
+- localStorage access is wrapped in useEffect for SSR safety
+- Static export means no API routes or server-side features
