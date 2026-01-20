@@ -114,4 +114,4 @@ MIT License
 
 ---
 
-&copy; 2024 ZuoXiBiao.com, All rights reserved.
+&copy; 2026 ZuoXiBiao.com, All rights reserved.
