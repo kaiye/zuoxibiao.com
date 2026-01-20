@@ -101,7 +101,7 @@ jobs:
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
-                "custom": {
+                "anthropic": {
                   "options": {
                     "apiKey": "{env:ANTHROPIC_API_KEY}",
                     "baseURL": "{env:ANTHROPIC_BASE_URL}",
@@ -130,7 +130,7 @@ jobs:
               }
             }
         with:
-          model: claude-sonnet-4-5-20250929
+          model: anthropic/claude-sonnet-4-5-20250929
 
   # 自动审查新开的 PR（只审查协作者的 PR）
   opencode-pr-review:
@@ -180,7 +180,7 @@ jobs:
           OPENCODE_CONFIG_CONTENT: |
             {
               "provider": {
-                "custom": {
+                "anthropic": {
                   "options": {
                     "apiKey": "{env:ANTHROPIC_API_KEY}",
                     "baseURL": "{env:ANTHROPIC_BASE_URL}",
@@ -209,7 +209,7 @@ jobs:
               }
             }
         with:
-          model: claude-sonnet-4-5-20250929
+          model: anthropic/claude-sonnet-4-5-20250929
           prompt: |
             Review this pull request:
             - Check code quality and TypeScript best practices
